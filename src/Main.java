@@ -61,8 +61,14 @@ public class Main {
         System.out.println("Printing the found Epic");
         System.out.println(epic);
         System.out.println("----".repeat(20));
-        System.out.println("Trying to update Task");
+        System.out.println("Trying to update Epic");
+        System.out.println(epic);
+        manager.createSubtask(new SubTask("Description-11", "Subtask-11", Status.NEW, 3));
+        System.out.println(epic);
+        manager.createSubtask(new SubTask("Description-12", "Subtask-12", Status.NEW, 3));
+        System.out.println(epic);
         epic.setStatus(Status.IN_PROGRESS);
+        System.out.println(epic);
         manager.updateEpic(epic);
         Epic epic3 = manager.getEpicById(4);
         System.out.println("----".repeat(20));
@@ -78,7 +84,7 @@ public class Main {
         manager.createSubtask(new SubTask("Description-5", "Subtask-1", Status.NEW, 3));
         manager.createSubtask(new SubTask("Description-6", "Subtask-2", Status.NEW, 3));
         manager.createSubtask(new SubTask("Description-7", "Subtask-3", Status.NEW, 4));
-        System.out.println("Printing all created Epics");
+        System.out.println("Printing all created SubTasks");
         manager.printSubtasks();
         System.out.println("----".repeat(20));
         System.out.println("Getting all SubTasks by Epic id");

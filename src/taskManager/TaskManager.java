@@ -160,8 +160,9 @@ public class TaskManager {
     public boolean updateEpic(Epic epic) {
         Epic currentEpic = epics.get(epic.getId());
         if (currentEpic != null) {
-            Epic updatedEpic = new Epic(epic.getDescription(), epic.getName());
-            epics.put(epic.getId(), updatedEpic);
+            currentEpic.setDescription(epic.getDescription());
+            currentEpic.setName(epic.getName());
+            epics.put(epic.getId(), currentEpic);
             return true;
         } else {
             return false;
