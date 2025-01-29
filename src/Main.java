@@ -46,8 +46,8 @@ public class Main {
         System.out.println(" ".repeat(20));
         System.out.println("Beginning of Epic creation");
         System.out.println("----".repeat(20));
-        manager.createEpic(new Epic("Description-3", "Epic-1", Status.NEW));
-        manager.createEpic(new Epic("Description-4", "Epic-2", Status.NEW));
+        manager.createEpic(new Epic("Description-3", "Epic-1"));
+        manager.createEpic(new Epic("Description-4", "Epic-2"));
         System.out.println("Printing all created Epics");
         manager.printEpics();
         System.out.println("----".repeat(20));

@@ -5,10 +5,10 @@ import statusInfo.Status;
 import java.util.Objects;
 
 public class Task {
-    private String description;
-    private int id;
-    private String name;
-    private Status status;
+    protected String description;
+    protected int id;
+    protected String name;
+    protected Status status;
 
     public Task(String description, String name, Status status) {
         this.description = description;
